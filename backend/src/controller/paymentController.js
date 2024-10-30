@@ -29,7 +29,7 @@ const createPaymentLink = async (req, res) => {
                 sms: true,
                 email: true
             },
-            callback_url: `http://localhost:5173/payment/${id}`,
+            callback_url: `https://travel-frontend-h669.onrender.com/payment/${id}`,
             callback_method: 'get',
         };
 
