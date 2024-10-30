@@ -13,7 +13,7 @@ const PackageShowing = () => {
       if (id) {
         try {
           const response = await axios.get(
-            `http://localhost:5070/api/destination?keyword=${id}`
+            `https://travel-backend-fnyd.onrender.com/api/destination?keyword=${id}`
           );
           setSearchResults(response.data);
           console.log(response.data);

@@ -16,7 +16,7 @@ const BookingForm = ({ name, price }) => {
             if (!jwt) return;
             try {
                 const response = await axios.get(
-                    "http://localhost:5070/api/user/profile",
+                    "https://travel-backend-fnyd.onrender.com/api/user/profile",
                     {
                         headers: {
                             Authorization: `Bearer ${jwt}`,
@@ -50,7 +50,7 @@ const BookingForm = ({ name, price }) => {
         e.preventDefault()
         try {
             if (jwt) {
-                const response = await axios.post(`http://localhost:5070/api/booking/create/${id}`, userBooking, {
+                const response = await axios.post(`https://travel-backend-fnyd.onrender.com/api/booking/create/${id}`, userBooking, {
                     headers: {
                         'Content-Type': 'application/json',
                         Authorization: `Bearer ${jwt}`

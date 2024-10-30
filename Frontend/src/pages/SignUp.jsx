@@ -23,7 +23,7 @@ const SignUp = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      let response = await axios.post('http://localhost:5070/auth/register', values, {
+      let response = await axios.post('https://travel-backend-fnyd.onrender.com/auth/register', values, {
         'Content-Type': 'application/json',
       });
       if (response.status === 201) {

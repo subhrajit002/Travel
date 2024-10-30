@@ -19,7 +19,7 @@ const SignIn = () => {
         console.log("Form Submitted with values:", values);
 
         try {
-            let response = await axios.post('http://localhost:5070/api/forgotPassword/recoverPassword', values);
+            let response = await axios.post('https://travel-backend-fnyd.onrender.com/api/forgotPassword/recoverPassword', values);
             if (response.status === 200) {
                 localStorage.setItem('email_verification_token', response.data.token);
                 let token = localStorage.getItem('email_verification_token');

@@ -21,7 +21,7 @@ export default function Profile() {
   //profile
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:5070/api/user/profile",
+      const response = await axios.get("https://travel-backend-fnyd.onrender.com/api/user/profile",
         {
           headers: {
             Authorization: `Bearer ${jwt}`
@@ -59,7 +59,7 @@ export default function Profile() {
   const handleUpdate = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.put("http://localhost:5070/api/user/updateuser", values, {
+      const response = await axios.put("https://travel-backend-fnyd.onrender.com/api/user/updateuser", values, {
         headers: {
           Authorization: `Bearer ${jwt}`
         }
@@ -84,7 +84,7 @@ export default function Profile() {
   const [bookings, setBookings] = useState([]);
   useEffect(() => {
     const fetchBookings = async () => {
-      const response = await axios.get("http://localhost:5070/api/user/bookings", {
+      const response = await axios.get("https://travel-backend-fnyd.onrender.com/api/user/bookings", {
         headers: {
           Authorization: `Bearer ${jwt}`,
         },

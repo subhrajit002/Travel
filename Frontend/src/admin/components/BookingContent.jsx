@@ -7,7 +7,7 @@ export default function BookingsContent() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get("http://localhost:5070/api/admin/bookings");
+            const response = await axios.get("https://travel-backend-fnyd.onrender.com/api/admin/bookings");
             const bookings = response.data.bookings;
 
             // Group bookings by user

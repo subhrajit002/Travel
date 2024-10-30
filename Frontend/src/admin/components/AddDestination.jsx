@@ -65,7 +65,7 @@ export default function AddDestination() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5070/api/admin/add-destination",
+        "https://travel-backend-fnyd.onrender.com/api/admin/add-destination",
         destination,
         {
           headers: {

@@ -26,7 +26,7 @@ const Homepage = () => {
     }
     try {
       const response = await axios.get(
-        `http://localhost:5070/api/destination/?keyword=${keyword}`
+        `https://travel-backend-fnyd.onrender.com/api/destination/?keyword=${keyword}`
       );
       if (response.status !== 200) {
         setErrors(response.data.errors);

@@ -10,7 +10,7 @@ const Wishlist = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await axios.get("http://localhost:5070/api/user/favorites",
+      const response = await axios.get("https://travel-backend-fnyd.onrender.com/api/user/favorites",
         {
           headers: {
             Authorization: `Bearer ${jwt}`

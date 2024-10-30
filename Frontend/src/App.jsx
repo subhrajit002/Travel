@@ -32,7 +32,7 @@ function App() {
         console.log("JWT Token:", jwt);
 
         const response = await axios.get(
-          "https://travel-backend-fnyd.onrender.com/api/user/profile",
+          "https://travel-backend-fnyd.onrender.com/api/user/profile", //localhost
           {
             headers: {
               Authorization: `Bearer ${jwt}`,

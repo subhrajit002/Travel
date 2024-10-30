@@ -26,7 +26,7 @@ const Navbar = ({ jwt }) => {
     }
     try {
       const response = await axios.get(
-        `http://localhost:5070/api/destination/?keyword=${keyword}`
+        `https://travel-backend-fnyd.onrender.com/api/destination/?keyword=${keyword}`
       );
       if (response.status !== 200) {
         setErrors(response.data.errors);
@@ -49,7 +49,7 @@ const Navbar = ({ jwt }) => {
       if (!jwt) return;
       try {
         const response = await axios.get(
-          "http://localhost:5070/api/user/profile",
+          "https://travel-backend-fnyd.onrender.com/api/user/profile",
           {
             headers: {
               Authorization: `Bearer ${jwt}`,

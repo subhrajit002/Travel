@@ -21,7 +21,7 @@ const PackageInfo = () => {
     const getData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5070/api/destination/id/${id}`
+          `https://travel-backend-fnyd.onrender.com/api/destination/id/${id}`
         );
         setSearchResults(
           Array.isArray(response.data) ? response.data : [response.data]

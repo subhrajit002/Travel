@@ -24,7 +24,7 @@ const ResetPassword = () => {
         }
 
         try {
-            let response = await axios.post(`http://localhost:5070/api/forgotPassword/resetPassword?token=${token}`, values, {
+            let response = await axios.post(`https://travel-backend-fnyd.onrender.com/api/forgotPassword/resetPassword?token=${token}`, values, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

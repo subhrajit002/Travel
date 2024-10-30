@@ -7,7 +7,7 @@ export default function DestinationsContent() {
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await axios.get("http://localhost:5070/api/destination/alldestinations");
+            const response = await axios.get("https://travel-backend-fnyd.onrender.com/api/destination/alldestinations");
             setDestinations(response.data);
             console.log("response", response.data);
         };

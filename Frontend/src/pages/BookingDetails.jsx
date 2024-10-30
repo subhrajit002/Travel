@@ -29,7 +29,7 @@ const BookingDetailsPage = () => {
         const fetchBookingDetails = async () => {
             try {
 
-                const response = await axios.get(`http://localhost:5070/api/payment?payment_id=${razorpay_payment_id}&order_id=${bookingId}`, {
+                const response = await axios.get(`https://travel-backend-fnyd.onrender.com/api/payment?payment_id=${razorpay_payment_id}&order_id=${bookingId}`, {
                     headers: {
                         Authorization: `Bearer ${jwt}`
                     }
@@ -51,7 +51,7 @@ const BookingDetailsPage = () => {
     //get the booking details
     useEffect(() => {
         const getBookingDetails = async () => {
-            const response = await axios.get(`http://localhost:5070/api/booking/find/${bookingId}`,
+            const response = await axios.get(`https://travel-backend-fnyd.onrender.com/api/booking/find/${bookingId}`,
                 {
                     headers: {
                         Authorization: `Bearer ${jwt}`

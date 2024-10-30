@@ -29,7 +29,7 @@ const Card = ({
 
     try {
       const response = await axios.put(
-        `http://localhost:5070/api/user/put/${_id}`,
+        `https://travel-backend-fnyd.onrender.com/api/user/put/${_id}`,
         {},
         {
           headers: {

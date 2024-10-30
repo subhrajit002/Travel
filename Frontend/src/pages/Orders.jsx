@@ -19,7 +19,7 @@ export default function OrderPage() {
 
   useEffect(() => {
     const fetchBookings = async () => {
-      const response = await axios.get(`http://localhost:5070/api/booking/find/${id}`, {
+      const response = await axios.get(`https://travel-backend-fnyd.onrender.com/api/booking/find/${id}`, {
         headers: {
           Authorization: `Bearer ${jwt}`,
         },

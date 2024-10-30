@@ -71,7 +71,7 @@ function RecentBookingsWidget() {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5070/api/admin/bookings"
+          "https://travel-backend-fnyd.onrender.com/api/admin/bookings"
         );
         setDestinations(response.data.bookings || []);
       } catch (error) {
@@ -145,7 +145,7 @@ function TopDestinationsWidget() {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "http://localhost:5070/api/destination/alldestinations"
+        "https://travel-backend-fnyd.onrender.com/api/destination/alldestinations"
       );
       setDestinations(response.data);
       console.log("response", response.data);

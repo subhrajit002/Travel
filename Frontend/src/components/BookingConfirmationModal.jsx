@@ -21,7 +21,7 @@ const BookingConfirmationModal = ({ isOpen, onClose, bookingDetails }) => {
 
     const handlePaymentClick = async () => {
         const response = await axios.post(
-            `http://localhost:5070/api/payment/${bookingDetails.bookingId}`,
+            `https://travel-backend-fnyd.onrender.com/api/payment/${bookingDetails.bookingId}`,
             {},
             {
                 headers: {
